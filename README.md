@@ -50,8 +50,6 @@ Replace the values with your actual email account and SMTP server details.
 This file contains the list of recipients to whom the invitation emails will be sent. Create a recipients.json file with the following structure:
 
 ```json
-Copia
-Modifica
 {
   "destinatari": [
     "giacomo.fiorucci@emotion-team.com",
