@@ -17,21 +17,13 @@ email_domain = os.getenv('EMAIL_DOMAIN')
 TEMPLATE_PATH = "mailto_event_reminder.html"
 RECIPIENTS_FILE_PATH = "recipients.json"
 
-destinatari = [
-    f"giacomo.fiorucci@{email_domain}",
-    f"kevin.bodan@{email_domain}",
-    f"c.calcagni@{email_domain}",
-    f"christopher.caponi@{email_domain}",
-    f"filippo.mariani@{email_domain}",
-    f"giulio.cassano@{email_domain}",
-    f"francesco.bellesini@{email_domain}",
-    f"e.mancinelli@{email_domain}",
-    f"massimo.briceno@{email_domain}",
-]
+def load_recipients():
+    with open(RECIPIENTS_FILE_PATH, "r") as file:
+        data = json.load(file)
+        return data["destinatari"]
 
 
-
-
+destinatari = load_recipients()
 
 # CLI con Click
 @click.command()
