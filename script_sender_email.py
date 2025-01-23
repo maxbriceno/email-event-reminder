@@ -4,24 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
-
-# Percorso fisso al file HTML del template
-TEMPLATE_PATH = "mailto_event_reminder.html"
-email_domain = os.getenv('EMAIL_DOMAIN')
-
-destinatari = [
-    # f"giacomo.fiorucci@{email_domain}",
-    # f"kevin.bodan@{email_domain}",
-    # f"c.calcagni@{email_domain}",
-    # f"christopher.caponi@{email_domain}",
-    # f"filippo.mariani@{email_domain}",
-    # f"giulio.cassano@{email_domain}",
-    # f"francesco.bellesini@{email_domain}",
-    # f"e.mancinelli@{email_domain}",
-    f"massimo.briceno@{email_domain}",
-]
-
-
+import json
 
 load_dotenv()
 
@@ -29,6 +12,26 @@ EMAIL = os.getenv('EMAIL')
 PASSWORD = os.getenv('PASSWORD')
 SMTP_SERVER = os.getenv('SMTP_SERVER')
 SMTP_PORT = os.getenv('SMTP_PORT')
+email_domain = os.getenv('EMAIL_DOMAIN')
+
+TEMPLATE_PATH = "mailto_event_reminder.html"
+RECIPIENTS_FILE_PATH = "recipients.json"
+
+destinatari = [
+    f"giacomo.fiorucci@{email_domain}",
+    f"kevin.bodan@{email_domain}",
+    f"c.calcagni@{email_domain}",
+    f"christopher.caponi@{email_domain}",
+    f"filippo.mariani@{email_domain}",
+    f"giulio.cassano@{email_domain}",
+    f"francesco.bellesini@{email_domain}",
+    f"e.mancinelli@{email_domain}",
+    f"massimo.briceno@{email_domain}",
+]
+
+
+
+
 
 # CLI con Click
 @click.command()
