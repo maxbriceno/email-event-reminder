@@ -119,24 +119,6 @@ Here’s an example of the HTML template:
 
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-        .button {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            border-radius: 5px;
-            margin: 5px;
-        }
-        .button.red {
-            background-color: #f44336;
-        }
-    </style>
-</head>
 <body>
     <p>Dear Colleague,</p>
     <p>You are invited to attend the following company meeting:</p>
