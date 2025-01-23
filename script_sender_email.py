@@ -7,7 +7,7 @@ import os
 
 # Percorso fisso al file HTML del template
 TEMPLATE_PATH = "mailto_event_reminder.html"
-email_domain = "emotion-team.com"
+email_domain = os.getenv('EMAIL_DOMAIN')
 
 destinatari = [
     # f"giacomo.fiorucci@{email_domain}",
@@ -21,13 +21,14 @@ destinatari = [
     f"massimo.briceno@{email_domain}",
 ]
 
-SMTP_SERVER = "smtps.aruba.it"
-SMTP_PORT = 465
+
 
 load_dotenv()
 
 EMAIL = os.getenv('EMAIL')
 PASSWORD = os.getenv('PASSWORD')
+SMTP_SERVER = os.getenv('SMTP_SERVER')
+SMTP_PORT = os.getenv('SMTP_PORT')
 
 # CLI con Click
 @click.command()
