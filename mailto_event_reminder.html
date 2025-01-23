@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .button.red {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <p>Gentile Collega,</p>
+    <p>Sei invitato a partecipare alla seguente riunione aziendale:</p>
+    <ul>
+        <li><strong>Data:</strong> [data_riunione]</li>
+        <li><strong>Ora:</strong> [ora_riunione]</li>
+        <li><strong>Luogo:</strong> Sala Riunioni</li>
+    </ul>
+    <p>Per favore conferma la tua partecipazione cliccando uno dei pulsanti qui sotto:</p>
+    <!-- Utilizziamo un segnaposto per il mailto -->
+    <a href="[mailto_conferma]" class="button">Conferma Partecipazione</a>
+    <hr>
+    <a href="[mailto_rifiuto]" class="button red">Non posso partecipare</a>
+    <p>Grazie!</p>
+</body>
+</html>
